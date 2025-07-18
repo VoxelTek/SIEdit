@@ -59,6 +59,7 @@ jobs:
     - name: Build AppImage
       # Qt6_DIR is set by the install-qt-action
       run: >
+        echo $Qt6_DIR
         QMAKE=$Qt6_DIR/bin/qmake
         PATH=$Qt6_DIR/libexec:$PATH
         ./linuxdeploy-x86_64.AppImage
